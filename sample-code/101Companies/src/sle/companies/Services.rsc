@@ -23,6 +23,15 @@ public real totalSalary(Company c) = sum([s | /Salary s <- c]);
 public real findHighestSalary(Company c) = max([s | /Salary s <- c]); 
 
 /**
+ * finds the average wage of a company.
+ */
+public real findAveragewage(Company c) = sum([s | /Salary s <- c])/size([s | /Salary s <- c]);
+/**
+ * finds and show all the Salaries of a company.
+ */
+public list[Salary] showListSalary(Company c) = ([s | /Salary s <- c]);
+
+/**
  * "increases" all salaries of a company. the question is, 
  * how that is possible in the current Brazilian moment?  
  */ 
